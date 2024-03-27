@@ -1,0 +1,123 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+}
+.imagens {
+  position: relative;
+  animation: VideoAnimation 10s;
+  background-color: red;
+  background-image: url("/image/avengers/avengers.jpg");
+  opacity: 80%;
+  animation: anime 5s;
+}
+@keyframes videoAnimation {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.intro {
+  font-size: 3rem;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro a {
+  text-decoration: none;
+  border-bottom: none;
+  color: rgb(255, 255, 255);
+}
+.intro h1 {
+  border: solid 4px;
+  box-shadow: 0 0 500px rgb(0, 0, 0);
+  padding: 15px;
+  font-size: 20rem;
+  animation: diminuir 3s 3s forwards, AnimationMarvel 4s, videoAnimation 2s 3s,
+    anime 2s;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+    background-image: url("/image/avengers/507430.jpg");
+
+    color: transparent;
+  }
+  75% {
+    opacity: 0.2;
+    background-image: url("/image/avengers/789095.jpg");
+
+    color: transparent;
+  }
+  90% {
+    opacity: 0.8;
+    background-image: url("/image/avengers/789095.jpg");
+
+    color: transparent;
+  }
+  100% {
+    background-image: url("/image/avengers/871859.jpg");
+    opacity: 0.9;
+  }
+}
+.intro h1:hover {
+  transition: transform;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+@keyframes diminuir {
+  0% {
+    font-size: 20rem;
+    background-image: url("/image/avengers/1280x800-iron-man-captain-america-thor-marvel-comics-4k-wallpaper_1544829426.jpg");
+  }
+  60% {
+    background-image: url("/image/avengers/415993.jpg");
+  }
+  85% {
+    background-image: url("/image/avengers/415993.jpg");
+  }
+  100% {
+    background-color: black;
+    font-size: 3rem;
+  }
+}
+
+
+  
+  
+  

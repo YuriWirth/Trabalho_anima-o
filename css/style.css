@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  transition: opacity 3s ease-in-out;
+  animation: AnimacaoEntrada 3s ease-in-out;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow: hidden;
+
+
+}
+
+
+@keyframes AnimacaoEntrada {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+
+
+.video {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/image/Marvel_Intro_1080p.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  width: 100vw;
+
+  background-color: #fff;
+}
+header img {
+  width: 100px;
+  animation: girarHorizontal 2s linear infinite;
+}
+nav a {
+  margin-right: 50px;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #0b0c0c;
+}
+nav a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border: solid 1px;
+  padding: 12px;
+  border-radius: 30px;
+  animation: AnimacaoBotao 0.3s;
+  transition: transform;
+  transform: scale(1.1);
+}
+@keyframes AnimacaoBotao {
+  0% {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: solid 1px;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  40% {
+    color: white;
+    background-color: rgb(2, 2, 2);
+    border: solid 1px;
+    padding: 6px;
+    border-radius: 15px;
+  }
+  100% {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: solid 1px;
+    padding: 12px;
+    border-radius: 30px;
+  }
+}
+.conteudoPrincipal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 87vh;
+  background-color: rgb(0, 0, 0);
+ 
+}
+main img {
+  height: 85vh;
+  width: 20vw;
+  margin-right: -25vh;
+  transition: opacity 3s ease-in-out;
+  animation: pulso 2s infinite;
+}
+main img:hover {
+  cursor: pointer;
+  animation: girarHorizontal 2s linear;
+}
+@keyframes pulso {
+  0% { transform: scale(0.98);}
+  50% { transform: scale(1);}
+  100% { transform: scale(0.98); }
+}
+@keyframes girarHorizontal {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.texto {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+
+  color: white;
+  
+}
+h1 {
+  font-size: 3em;
+  height: 3vh;
+  margin-bottom: 5%;
+}
+p {
+  font-size: 2em;
+  margin-bottom: 5%;
+}
+
+.button-49,
+.button-49:after {
+  width: 200px;
+  height: 50px;
+  line-height: 78px;
+  font-size: 1.2em;
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #282727 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #0b0c0c;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: "Assita o trailer";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(17, 16, 16, 1) 14%,
+    rgba(125, 113, 113, 1) 45%,
+    rgba(45, 41, 41, 1) 86%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  text-shadow: -3px -3px 0px #222222, 3px 3px 0px #545656;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+  cursor: pointer;
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 250px;
+    height: 60px;
+    line-height: 8px;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 5vh;
+
+}
+footer span{
+margin-bottom: 10px;
+}
+
